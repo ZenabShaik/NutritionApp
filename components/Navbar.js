@@ -5,23 +5,16 @@ import Link from "next/link";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // 👈 NEW
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handleMobileMenu = () => {
-    alert("Mobile menu feature can be implemented here! For now, please resize to desktop.");
-  };
 
   return (
     <header
@@ -35,31 +28,48 @@ export default function Navbar() {
     >
       <div className="container nav-container">
         <div className="logo">
-          <span className="logo-leaf">
-            <i className="fa-solid fa-leaf"></i>
-          </span>
-          <span className="logo-text">
-            Nutri<span className="highlight">Balance</span>
-          </span>
+          Nutri<span className="highlight">Balance</span>
         </div>
-        <nav className="nav-links">
+
+        {/* DESKTOP NAV */}
+        <nav className="nav-links desktop">
           <Link href="#about">About</Link>
           <Link href="#services">Services</Link>
           <Link href="#pricing">Pricing</Link>
           <Link href="#testimonials">Reviews</Link>
         </nav>
+
         <a
           href="https://wa.me/916305778829?text=Hello,%20I%20would%20like%20to%20book%20a%20free%20consultation."
           target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-primary nav-cta"
+          className="btn btn-primary nav-cta desktop"
         >
           Book Free Consultation
         </a>
-        <div className="hamburger" onClick={handleMobileMenu}>
-          <i className="fa-solid fa-bars"></i>
+
+        {/* HAMBURGER */}
+        <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+          ☰
         </div>
       </div>
+
+      {/* MOBILE MENU */}
+      {isOpen && (
+        <div className="mobile-menu">
+          <Link href="#about" onClick={() => setIsOpen(false)}>About</Link>
+          <Link href="#services" onClick={() => setIsOpen(false)}>Services</Link>
+          <Link href="#pricing" onClick={() => setIsOpen(false)}>Pricing</Link>
+          <Link href="#testimonials" onClick={() => setIsOpen(false)}>Reviews</Link>
+
+          <a
+            href="https://wa.me/916305778829"
+            target="_blank"
+            className="btn btn-primary"
+          >
+            Book Free Consultation
+          </a>
+        </div>
+      )}
     </header>
   );
 }

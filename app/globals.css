@@ -1285,3 +1285,41 @@ ul {
   50% { transform: translateX(-12px); }
   100% { transform: translateX(0); }
 }
+
+/* hide desktop on mobile */
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+/* hide hamburger on desktop */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+
+  background: #fff;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  z-index: 999;
+}

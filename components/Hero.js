@@ -26,9 +26,6 @@ export default function Hero() {
               👉 Book Free Consultation
             </a>
           </div>
-          <p className="hero-note">
-            Mentioned association with <strong>Fitterfly</strong>
-          </p>
         </div>
         <div className="hero-image-wrapper">
           <div className="hero-blobs"></div>
