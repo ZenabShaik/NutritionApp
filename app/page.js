@@ -1,3 +1,5 @@
+import Script from "next/script";
+
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Problems from "@/components/Problems";
@@ -14,29 +16,33 @@ import ScrollReveal from "@/components/ScrollReveal";
 export default function Home() {
   return (
     <>
-    <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "HealthAndBeautyBusiness",
-      name: "NutriBalance",
-      areaServed: [
-        "Hyderabad",
-        "Bangalore",
-        "Nizamabad",
-        "Adilabad",
-        "Nirmal",
-        "Armoor"
-      ],
-      serviceType: [
-        "Weight Loss Diet Plan",
-        "Diabetes Diet Plan",
-        "PCOS Diet Plan"
-      ]
-    })
-  }}
-/>
+      {/* ✅ FIXED GEO SCHEMA */}
+      <Script
+        id="geo-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HealthAndBeautyBusiness",
+            name: "NutriBalance",
+            areaServed: [
+              "Hyderabad",
+              "Bangalore",
+              "Nizamabad",
+              "Adilabad",
+              "Nirmal",
+              "Armoor"
+            ],
+            serviceType: [
+              "Weight Loss Diet Plan",
+              "Diabetes Diet Plan",
+              "PCOS Diet Plan"
+            ]
+          })
+        }}
+      />
+
       <ScrollReveal />
       <Navbar />
       <Hero />
