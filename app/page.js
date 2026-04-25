@@ -1,17 +1,17 @@
 import Script from "next/script";
 
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Problems from "@/components/Problems";
-import About from "@/components/About";
-import Services from "@/components/Services";
-import Pricing from "@/components/Pricing";
-import Testimonials from "@/components/Testimonials";
-import ResultsSection from "@/components/ResultsSection";
-import CTA from "@/components/CTA";
-import Footer from "@/components/Footer";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import ScrollReveal from "@/components/ScrollReveal";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import Problems from "../components/Problems";
+import About from "../components/About";
+import Services from "../components/Services";
+import Pricing from "../components/Pricing";
+import Testimonials from "../components/Testimonials";
+import ResultsSection from "../components/ResultsSection";
+import CTA from "../components/CTA";
+import Footer from "../components/Footer";
+import FloatingWhatsApp from "../components/FloatingWhatsApp";
+import ScrollReveal from "../components/ScrollReveal";
 
 export default function Home() {
   return (
