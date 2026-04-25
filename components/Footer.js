@@ -11,7 +11,7 @@ export default function Footer() {
               <i className="fa-solid fa-leaf"></i>
             </span>
             <span className="logo-text text-white">
-              Nutri<span className="highlight">Balance</span>
+              Maha<span className="highlight">Wellness</span>
             </span>
           </div>
           <p>Certified Dietician & Health Coach focused on sustainable results.</p>

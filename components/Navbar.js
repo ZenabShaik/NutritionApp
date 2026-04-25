@@ -28,7 +28,7 @@ export default function Navbar() {
     >
       <div className="container nav-container">
         <div className="logo">
-          Nutri<span className="highlight">Balance</span>
+          Maha<span className="highlight">Wellness</span>
         </div>
 
         {/* DESKTOP NAV */}
