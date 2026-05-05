@@ -8,7 +8,7 @@ export default function LearnPage() {
         {/* LEFT CONTENT */}
         <div className="learn-content">
           <h1>
-            Learn Diet Planning from Mandaji Mahalakshmi
+            Learn Diet Planning from Mandaji Mahalaxmi
           </h1>
 
           <p className="learn-sub">

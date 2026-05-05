@@ -49,7 +49,7 @@ export default function Hero() {
         <div className="hero-image-wrapper">
           <div className="hero-blobs"></div>
           <img
-            src="/images/hero_dietician_1776511875996.png"
+            src="/images/hero_dietician_latest.jpg"
             alt="Certified Dietician & Health Coach"
             className="hero-img"
             id="hero-img"
