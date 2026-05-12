@@ -385,9 +385,11 @@ ul {
 
 .about-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 5rem;
   align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* === ABOUT IMAGE FIX === */

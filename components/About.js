@@ -2,19 +2,11 @@ export default function About() {
   return (
     <section className="about" id="about">
       <div className="container about-container">
-                <div className="about-image">
-          <div className="about-shape"></div>
 
-          <img
-            src="/images/dietician.jpeg"
-            alt="Dietician"
-            className="about-img"
-          />
-        </div>
-        <div className="about-content">
+        <div className="about-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
   <span className="section-tag">Meet Your Expert</span>
 
-  <h2 className="section-title text-left">
+  <h2 className="section-title text-center">
     Mandaji Mahalaxmi
   </h2>
 
